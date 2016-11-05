@@ -1,6 +1,8 @@
 package com.example;
 
 import org.greenrobot.greendao.generator.DaoGenerator;
+import  org.greenrobot.greendao.generator.Entity;
+import  org.greenrobot.greendao.generator.Property;
 import org.greenrobot.greendao.generator.Schema;
 
 
@@ -9,12 +11,12 @@ public class MainGenerator {
     private static final String PROJECT_DIR =System.getProperty("user.dir");
     protected static final String TAG = "DataAdapter";
 
-    public  void main(String[] args) {
-        Schema schema = new Schema(1, "MOBISAGB.SAGB.db");
+    public  static void main(String[] args) {
+        Schema schema = new Schema(1, "com.abc.greendaoexample.db");
         schema.enableKeepSectionsByDefault();
 
 
-//        addTables(schema);
+        addTables(schema);
 
         try {
             new DaoGenerator().generateAll(schema,PROJECT_DIR+"\\app\\src\\main\\java");
@@ -22,7 +24,7 @@ public class MainGenerator {
             e.printStackTrace();
         }
     }
-/*    private static void addTables(final Schema schema) {
+    private static void addTables(final Schema schema) {
         Entity user = addUser(schema);
         Entity repo = addRepo(schema);
 
@@ -47,5 +49,5 @@ public class MainGenerator {
         repo.addIntProperty("watchers_count");
 
         return repo;
-    }*/
+    }
 }
