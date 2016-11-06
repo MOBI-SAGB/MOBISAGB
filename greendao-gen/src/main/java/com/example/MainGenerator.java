@@ -15,9 +15,6 @@ public class MainGenerator {
         Schema schema = new Schema(1, "com.abc.greendaoexample.db");
         schema.enableKeepSectionsByDefault();
 
-
-        addTables(schema);
-
         try {
             new DaoGenerator().generateAll(schema,PROJECT_DIR+"\\app\\src\\main\\java");
         } catch (Exception e) {

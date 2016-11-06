@@ -4,8 +4,8 @@ import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.ToOne;
 
-import static com.com.sagb.model.AdherentDao.Properties.Id_Adh;
-import static com.com.sagb.model.UniteProductionDao.Properties.CodeProd;
+import static com.sagb.model.AdherentDao.Properties.Id_Adh;
+import static com.sagb.model.UniteProductionDao.Properties.CodeProd;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.DaoException;
 import org.greenrobot.greendao.annotation.NotNull;
