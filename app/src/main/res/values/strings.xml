@@ -14,7 +14,7 @@
     <string name="base_de_donnees">Base de données</string>
     <string name="import_des_donnees">Import des données</string>
     <string name="export_des_donnees">Export des données</string>
-    <string name="nom_d_utilisateur">Nom d\'\'utilisateur</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="connexion">Connexion</string>
 </resources>

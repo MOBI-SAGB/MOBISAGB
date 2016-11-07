@@ -14,15 +14,15 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="90dp"
         android:src="@mipmap/ic_sagb"
         android:scaleType="fitCenter"
-        android:layout_weight="0.38" />
+        android:layout_weight="0.19" />
 
     <EditText
         android:hint="@string/nom_d_utilisateur"
         android:id="@+id/username_et"
-        android:paddingTop="20dp"
+        android:paddingTop="90dp"
         android:paddingBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -41,5 +41,6 @@
         android:layout_height="wrap_content"
         android:text="@string/connexion"
         />
+
 
 </LinearLayout>
