@@ -15,11 +15,11 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="69dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
-        android:src="@mipmap/ic_sagb"
         android:scaleType="fitCenter"
-        app:srcCompat="@mipmap/ic_sagbtr" />
+        app:srcCompat="@mipmap/ic_sagbtr"
+        android:layout_weight="0.42" />
 
     <EditText
         android:hint="@string/nom_d_utilisateur"
