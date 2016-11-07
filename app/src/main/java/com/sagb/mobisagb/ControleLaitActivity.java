@@ -119,7 +119,28 @@ public class ControleLaitActivity extends AppCompatActivity {
             return rootView;
         }
     }
+    public static class MyFragment  extends Fragment{
 
+        //The newInstance() method needs to return the correct reference to our fragment as follows:
+        public static MyFragment newInstance() {
+            MyFragment fragment = new MyFragment();
+            return fragment;
+        }
+
+        //The MyFragment is the constructor method of our class, let it stay empty and public
+        public MyFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            //In this onCreateView method, we will connect our fragment to our layout, my_fragment as follows:
+            View rootView = inflater.inflate(R.layout.controlelait_fragment_menu, container, false);
+
+            return rootView;
+        }
+
+    }
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -134,13 +155,20 @@ public class ControleLaitActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            //return PlaceholderFragment.newInstance(position + 1);
+            switch(position){
+                case 0: return PlaceholderFragment.newInstance(position + 1);
+                case 1 : return  MyFragment.newInstance();
+                // default: return MyFragment.newInstance();
+                // It is better to use default so that it always returns a fragment and no problems would ever occur
+            }
+            return null; //if you use default, you would not need to return
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 2 total pages.
+            return 2;
         }
 
         @Override
@@ -150,8 +178,6 @@ public class ControleLaitActivity extends AppCompatActivity {
                     return "SECTION 1";
                 case 1:
                     return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
             }
             return null;
         }
