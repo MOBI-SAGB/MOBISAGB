@@ -13,6 +13,7 @@ public class MainGenerator {
 
     public  static void main(String[] args) {
         Schema schema = new Schema(1, "com.abc.greendaoexample.db");
+
         schema.enableKeepSectionsByDefault();
 
         try {
