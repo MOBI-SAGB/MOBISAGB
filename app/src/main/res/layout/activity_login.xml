@@ -15,11 +15,11 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="90dp"
         android:scaleType="fitCenter"
         app:srcCompat="@mipmap/ic_sagbtr"
-        android:layout_weight="0.42" />
+        android:layout_weight="0.30" />
 
     <TextView
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
     <EditText
         android:hint="@string/nom_d_utilisateur"
         android:id="@+id/username_et"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -53,8 +53,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/connexion"
-        android:background="@drawable/sagb_btn_1"
-        />
-
-
+        android:background="@drawable/sagb_btn_1" />
 </LinearLayout>
