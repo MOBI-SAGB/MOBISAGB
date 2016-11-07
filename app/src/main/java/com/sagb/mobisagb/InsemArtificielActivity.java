@@ -13,9 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.oelmoussaid.mobisagb.R;
-
-
 public class InsemArtificielActivity extends AppCompatActivity {
 
     @Override
