@@ -21,4 +21,14 @@
     <string name="champ_obligatoir">champ obligatoire</string>
     <string name="export_import">Export / Import</string>
     <string name="action_logout">Déconnexion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- STRING INSEMINATION-->
+
+    <string name="NumCertIA">N° Cert. I. A. :</string>
+    <string name="ModeReglement">Mode réglement :</string>
+    <string name="DateCertIA">Date Cert. I. A. :</string>
+
+    <!-- END INSEMINATION  -->
 </resources>

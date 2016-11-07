@@ -87,12 +87,14 @@ public class MainSAGBActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Intent it;
         if (id == R.id.newdate_nav) {
             // Handle the camera action
         } else if (id == R.id.recensement_nav) {
 
         } else if (id == R.id.autres_nav) {
+            it  = new Intent(MainSAGBActivity.this,InsemArtificielActivity.class);
+            startActivity(it);
 
         } else if (id == R.id.import_nav) {
 
