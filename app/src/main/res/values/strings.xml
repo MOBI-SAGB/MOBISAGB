@@ -8,4 +8,10 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_controle_lait">ControleLaitActivity</string>
+    <string name="saisi_des_donnees">Saisi des données</string>
+    <string name="recensement">Recensement</string>
+    <string name="autres">Autres</string>
+    <string name="base_de_donnees">Base de données</string>
+    <string name="import_des_donnees">Import des données</string>
+    <string name="export_des_donnees">Export des données</string>
 </resources>
