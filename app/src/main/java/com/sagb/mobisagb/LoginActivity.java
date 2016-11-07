@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -48,6 +49,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Intent intent = new Intent(getApplicationContext(),MainSAGBActivity.class);
             startActivity(intent);
             finish();
+        }else{
+            Toast.makeText(getApplicationContext(),"Erreur de connexion: Veuillez Remplir les champs",Toast.LENGTH_SHORT).show();
         }
     }
 }
