@@ -4,8 +4,21 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Paramètres</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_controle_lait">ControleLaitActivity</string>
+    <string name="saisi_des_donnees">Saisi des données</string>
+    <string name="recensement">Recensement</string>
+    <string name="autres">Autres</string>
+    <string name="base_de_donnees">Base de données</string>
+    <string name="import_des_donnees">Import des données</string>
+    <string name="export_des_donnees">Export des données</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="connexion">Connexion</string>
+    <string name="title_activity_main_sagb">S A G B</string>
+    <string name="champ_obligatoir">champ obligatoire</string>
+    <string name="export_import">Export / Import</string>
+    <string name="action_logout">Déconnexion</string>
 </resources>

@@ -21,7 +21,12 @@
         <activity
             android:name="com.sagb.mobisagb.ControleLaitActivity"
             android:label="@string/title_activity_controle_lait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

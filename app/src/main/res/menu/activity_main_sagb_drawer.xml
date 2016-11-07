@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/newdate_nav"
+            android:icon="@drawable/ic_action_new_dark"
+            android:title="@string/saisi_des_donnees" />
+        <item
+            android:id="@+id/recensement_nav"
+            android:icon="@drawable/ic_action_view_as_list_dark"
+            android:title="@string/recensement" />
+        <item
+            android:id="@+id/autres_nav"
+            android:icon="@drawable/ic_action_chat_light"
+            android:title="@string/autres" />
+
+    </group>
+
+    <item android:title="@string/export_import">
+        <menu>
+            <item
+                android:id="@+id/import_nav"
+                android:icon="@drawable/ic_action_download_dark"
+                android:title="@string/import_des_donnees" />
+            <item
+                android:id="@+id/export_nav"
+                android:icon="@drawable/ic_action_upload_dark"
+                android:title="@string/export_des_donnees" />
+        </menu>
+    </item>
+
+</menu>
