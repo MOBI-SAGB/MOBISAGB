@@ -1,35 +1,56 @@
 package com.sagb.mobisagb;
 
+import android.app.ActionBar;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class InsemArtificielActivity extends AppCompatActivity {
+
+ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_insem_artificiel);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        setContentView(R.layout.activity_insem_artificiel);
+        mViewPager = (ViewPager)findViewById(R.id.pager);
+        final ActionBar actionBar = getActionBar();
+
+        // Specify that tabs should be displayed in the action bar.
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        // Create a tab listener that is called when the user changes tabs.
+        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
+            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+                // show the given tab
+                mViewPager.setCurrentItem(tab.getPosition());
+
             }
-        });
+
+            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+                // hide the given tab
+            }
+
+            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+                // probably ignore this event
+            }
+        };
+
+        // Add 3 tabs, specifying the tab's text and TabListener
+        for (int i = 0; i < 3; i++) {
+            actionBar.addTab(
+                    actionBar.newTab()
+                            .setText("Tab " + (i + 1))
+                            .setTabListener(tabListener));
+        }
+
+
+
     }
 
     public class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
@@ -62,8 +83,9 @@ public class InsemArtificielActivity extends AppCompatActivity {
     // Instances of this class are fragments representing a single
 // object in our collection.
     public static class DemoObjectFragment extends Fragment {
-        public static final String ARG_OBJECT = "object";
 
+        public static final String ARG_OBJECT = "object";
+/*
         @Override
         public View onCreateView(LayoutInflater inflater,
                                  ViewGroup container, Bundle savedInstanceState) {
@@ -76,6 +98,7 @@ public class InsemArtificielActivity extends AppCompatActivity {
                     Integer.toString(args.getInt(ARG_OBJECT)));
             return rootView;
         }
+*/
 
 
     }
