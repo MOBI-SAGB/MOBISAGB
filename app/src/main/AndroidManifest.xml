@@ -9,9 +9,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.sagb.mobisagb.ControleLaitActivity"
+            android:name=".ControleLaitActivity"
             android:label="@string/title_activity_controle_lait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivity">
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+
+        </activity>
     </application>
 
 </manifest>
