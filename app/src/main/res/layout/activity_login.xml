@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
@@ -14,23 +15,24 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
         android:src="@mipmap/ic_sagb"
         android:scaleType="fitCenter"
-        android:layout_weight="0.19" />
+        app:srcCompat="@mipmap/ic_sagbtr" />
 
     <EditText
         android:hint="@string/nom_d_utilisateur"
         android:id="@+id/username_et"
-        android:paddingTop="90dp"
-        android:paddingBottom="20dp"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/password_et"
         android:hint="@string/mot_de_passe"
-        android:paddingBottom="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword" />
@@ -39,6 +41,7 @@
         android:id="@+id/connexion_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="@string/connexion"
         android:background="@drawable/sagb_btn_1"
         />
