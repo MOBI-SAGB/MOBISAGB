@@ -12,13 +12,13 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01">
 
         <Spinner
-            android:layout_width="637dp"
+            android:layout_width="366dp"
             android:layout_height="60dp"
-            android:id="@+id/up_sp"
-            android:layout_weight="1" />
+            android:id="@+id/up_sp" />
 
         <Button
             android:text="Import"
@@ -34,13 +34,13 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.03">
+        android:layout_weight="0.01">
 
         <TextView
             android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:id="@+id/textView2"
+            android:id="@+id/datecontrole_tv"
             android:layout_weight="1" />
 
         <TextView
@@ -55,7 +55,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="903dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:text="TextView"
@@ -76,13 +76,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <RadioButton
             android:text="IGB"
-            android:layout_marginLeft="330dp"
+            android:layout_marginLeft="230dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/igb_rb"
             />
+
         <RadioButton
             android:text="SNIT"
             android:layout_width="wrap_content"
@@ -90,4 +92,69 @@
             android:id="@+id/snit_rb"
             />
     </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:layout_width="353dp"
+            android:layout_height="60dp"
+            android:id="@+id/spinner3" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="340dp"
+            android:layout_height="139dp" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button6"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.03">
+        <Spinner
+            android:layout_width="338dp"
+            android:layout_height="105dp"
+            android:id="@+id/spinner3" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="137dp"
+                android:layout_height="50dp"
+                android:id="@+id/textView7"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:id="@+id/textView6"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
