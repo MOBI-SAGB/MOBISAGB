@@ -16,7 +16,8 @@
             android:layout_width="150dp"
             android:background="@null"
             android:scaleType="fitXY"
-            android:layout_weight="0.08" />
+            android:layout_weight="0.08"
+            app:srcCompat="@drawable/sunny" />
 
         <ImageButton
             android:id="@+id/imageButton3"
@@ -25,7 +26,8 @@
             android:layout_width="150dp"
             android:background="@null"
             android:scaleType="fitXY"
-            android:layout_weight="0.08" />
+            android:layout_weight="0.08"
+            app:srcCompat="@drawable/moon_4" />
 
         <ImageButton
             android:id="@+id/imageButton4"
@@ -34,7 +36,8 @@
             android:layout_width="150dp"
             android:background="@null"
             android:scaleType="fitXY"
-            android:layout_weight="0.08" />
+            android:layout_weight="0.08"
+            app:srcCompat="@drawable/mostly_sunny" />
 
 
     </LinearLayout>
@@ -68,8 +71,7 @@
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_action_about_light"
-        />
+        android:drawableLeft="@drawable/ic_action_about_light" />
     <Button
         android:id="@+id/retour_btn"
         android:text="Retour"
