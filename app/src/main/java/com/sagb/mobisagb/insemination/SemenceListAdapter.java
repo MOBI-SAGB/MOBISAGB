@@ -9,8 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.sagb.mobisagb.R;
-import com.sagb.model.Semence;
+import com.sagb.model.DetCertInsemArt;
 import com.sagb.model.SemenceDao;
 
 import java.util.List;
@@ -19,24 +18,25 @@ import java.util.List;
  * Created by USER on 08/11/16.
  */
 
-public class SemenceListAdapter extends ArrayAdapter<Det> {
+public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
     private Context context;
     SemenceDao semenceDao;
-    List<Semence> semences;
+    List<DetCertInsemArt> semences;
 
     public SemenceListAdapter(Context context, int resource) {
 
         super(context, resource);
         this.context = context;
 
-        semences =semenceDao.loadAll();
+        //semences =semenceDao.loadAll();
+        //semences =semenceDao.loadAll();
 
     }
 
     @Nullable
     @Override
-    public Semence getItem(int position) {
+    public DetCertInsemArt getItem(int position) {
         return semences.get(position);
     }
 
@@ -46,7 +46,7 @@ public class SemenceListAdapter extends ArrayAdapter<Det> {
     }
 
     @Override
-    public int getPosition(Semence item) {
+    public int getPosition(DetCertInsemArt item) {
         return semences.indexOf(item);
     }
 
@@ -58,7 +58,7 @@ public class SemenceListAdapter extends ArrayAdapter<Det> {
 
        View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent);
 
-        ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(semences.get(position).ge);
+      // ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(semences.get(position).);
 
         return rootView;
     }
