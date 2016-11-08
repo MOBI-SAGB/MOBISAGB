@@ -202,6 +202,11 @@ public class CertInsemArt implements Serializable {
 					}
 					myDao.update(this);
 	}
+	@Override
+	public String toString() {
+		return numCertIA;
+	}
+
 	/** called by internal mechanisms, do not call yourself. */
 	@Generated(hash = 991082128)
 	public void __setDaoSession(DaoSession daoSession) {

@@ -15,6 +15,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.sagb.mobisagb.R;
+import com.sagb.mobisagb.db.App;
+import com.sagb.model.CertInsemArt;
+
+import java.util.List;
 
 /**
  * Created by USER on 07/11/16.
@@ -58,15 +62,17 @@ public class InsemArtificiel_Det  extends Fragment {
             modeReglement_sp = (Spinner) rootView.findViewById(R.id.modeReglement_sp);
             listDetCertIA_lv = (ListView) rootView.findViewById(R.id.DetIA_lv);
 
-            SemenceListAdapter listAdapter = new SemenceListAdapter(getContext());
+            List<CertInsemArt> numCertIAList = App.getDaoSession(getActivity()).getCertInsemArtDao().queryRaw("WHERE CodeUP = ? AND CodeOper = ?","1","2");
 
-            listDetCertIA_lv.setAdapter(listAdapter);
+            ArrayAdapter<CertInsemArt> dataAdapter = new ArrayAdapter<CertInsemArt>(getActivity(),android.R.layout.simple_spinner_item, numCertIAList);
+
+            numCertIA_sp.setAdapter(dataAdapter);
 
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(InsemArtificiel_Det.context,
-                    R.array.planets_array,  android.R.layout.simple_spinner_item);
+                    R.array.mode_reg_array,  android.R.layout.simple_spinner_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-            numCertIA_sp.setAdapter(adapter);
+            modeReglement_sp.setAdapter(adapter);
 
 
             dateCertIA_tv.setOnClickListener(new View.OnClickListener() {
