@@ -9,8 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.sagb.mobisagb.R;
 import com.sagb.model.DetCertInsemArt;
-import com.sagb.model.SemenceDao;
+import com.sagb.model.DetCertInsemArtDao;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ import java.util.List;
 public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
     private Context context;
-    SemenceDao semenceDao;
+    DetCertInsemArtDao semenceDao;
     List<DetCertInsemArt> semences;
 
     public SemenceListAdapter(Context context, int resource) {
@@ -29,7 +30,7 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
         super(context, resource);
         this.context = context;
 
-        //semences =semenceDao.loadAll();
+        semences =semenceDao.loadAll();
         //semences =semenceDao.loadAll();
 
     }
@@ -58,7 +59,10 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
        View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent);
 
-      // ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(semences.get(position).);
+       ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(semences.get(position).getCertInsemArt().getDateInsem().toString());
+       ((TextView) rootView.findViewById(R.id.numVacheSemence_tv)).setText(semences.get(position).getId_Animal()+"");
+       ((TextView) rootView.findViewById(R.id.taureauSemence_tv)).setText(semences.get(position).getSemence().getNomTaureau());
+       ((TextView) rootView.findViewById(R.id.orderSemence_tv)).setText(semences.get(position).getOrdreIA()+"");
 
         return rootView;
     }
