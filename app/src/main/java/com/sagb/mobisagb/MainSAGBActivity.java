@@ -29,7 +29,7 @@ public class MainSAGBActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "..... still waiting.", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Import / Export ..... still waiting.", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
