@@ -16,10 +16,11 @@
     <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="connexion">Connexion</string>
-    <string name="title_activity_main_sagb">s.a.g.b</string>
+    <!--<string name="title_activity_main_sagb">Mobile SAGB</string>-->
     <string name="champ_obligatoir">champ obligatoire</string>
     <string name="export_import">Export / Import</string>
     <string name="action_logout">Déconnexion</string>
+    <string name="app_sagb">SAGB</string>
     <!-- TODO: Remove or change this placeholder text -->
 
     <!-- STRING INSEMINATION-->
