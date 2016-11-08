@@ -24,7 +24,6 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
     private Context context;
     DetCertInsemArtDao semenceDao;
     List<DetCertInsemArt> semences;
-
     public SemenceListAdapter(Context context, int resource) {
 
         super(context, resource);
