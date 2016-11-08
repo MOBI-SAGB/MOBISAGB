@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class InsemArtificiel_Det  extends Fragment {
     private  TextView dateCertIA_tv;
     private Spinner numCertIA_sp;
     private Spinner modeReglement_sp;
+    ListView listDetCertIA_lv;
 
     private static   Context context;
 
@@ -54,6 +56,11 @@ public class InsemArtificiel_Det  extends Fragment {
             dateCertIA_tv  = (TextView) rootView.findViewById(R.id.dateCertIA);
             numCertIA_sp = (Spinner) rootView.findViewById(R.id.NumCertIA_sp);
             modeReglement_sp = (Spinner) rootView.findViewById(R.id.modeReglement_sp);
+            listDetCertIA_lv = (ListView) rootView.findViewById(R.id.DetIA_lv);
+
+            SemenceListAdapter listAdapter = new SemenceListAdapter(getContext());
+
+            listDetCertIA_lv.setAdapter(listAdapter);
 
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(InsemArtificiel_Det.context,
                     R.array.planets_array,  android.R.layout.simple_spinner_item);
