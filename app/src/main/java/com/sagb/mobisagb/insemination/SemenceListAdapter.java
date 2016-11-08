@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.sagb.mobisagb.R;
+import com.sagb.mobisagb.db.App;
 import com.sagb.model.DetCertInsemArt;
 import com.sagb.model.DetCertInsemArtDao;
 
@@ -25,13 +26,13 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
     DetCertInsemArtDao semenceDao;
     List<DetCertInsemArt> semences;
 
-    public SemenceListAdapter(Context context, int resource) {
+    public SemenceListAdapter(Context ctxt) {
 
-        super(context, resource);
-        this.context = context;
+        super(ctxt, -1);
+        this.context = ctxt;
+        semenceDao = App.getDaoSession(context).getDetCertInsemArtDao();
 
         semences =semenceDao.loadAll();
-        //semences =semenceDao.loadAll();
 
     }
 
@@ -57,7 +58,7 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-       View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent);
+       View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent,false);
 
        ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(semences.get(position).getCertInsemArt().getDateInsem().toString());
        ((TextView) rootView.findViewById(R.id.numVacheSemence_tv)).setText(semences.get(position).getId_Animal()+"");

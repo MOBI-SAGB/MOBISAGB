@@ -17,7 +17,7 @@ import java.util.Date;
  * The persistent class for the CertInsemArt database table.
  * 
  */
-@Entity
+@Entity(nameInDb = "CertInsemArt")
 public class CertInsemArt implements Serializable {
 	private static final long serialVersionUID = 1L;
 

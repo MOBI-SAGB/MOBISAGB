@@ -6,7 +6,6 @@
 
     <string name="action_settings">Paramètres</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_controle_lait">Contrôle Lait</string>
     <string name="saisi_des_donnees">Saisi des données</string>
     <string name="recensement">Recensement</string>
@@ -17,12 +16,11 @@
     <string name="nom_d_utilisateur">Nom d\'utilisateur</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="connexion">Connexion</string>
-    <string name="title_activity_main_sagb">S A G B</string>
+    <string name="title_activity_main_sagb">s.a.g.b</string>
     <string name="champ_obligatoir">champ obligatoire</string>
     <string name="export_import">Export / Import</string>
     <string name="action_logout">Déconnexion</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- STRING INSEMINATION-->
 
@@ -42,7 +40,9 @@
     <item>Uranus</item>
     <item>Neptune</item>
 </string-array>
+
     <string name="title_activity_identification">Identification des animaux</string>
 
-    
+
+
 </resources>

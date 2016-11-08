@@ -3,11 +3,12 @@ package com.sagb.model;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Property;
 
 import java.io.Serializable;
 import java.util.Date;
 
-@Entity
+@Entity(nameInDb = "Troupeau")
 public class Troupeau implements Serializable {
 
 	/**
@@ -16,8 +17,12 @@ public class Troupeau implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@Property(nameInDb = "id_animal")
 	private long id_animal;
+
+	@Property(nameInDb = "codeup")
 	private String codeup;
+
     private String codeetat;
     private String id_raceanim;
     private String id_origanim;
