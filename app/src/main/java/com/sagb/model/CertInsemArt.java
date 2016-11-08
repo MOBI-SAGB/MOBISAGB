@@ -1,16 +1,19 @@
 package com.sagb.model;
 
 
+import com.sagb.mobisagb.insemination.DateTimeConverter;
+
 import org.greenrobot.greendao.DaoException;
+import org.greenrobot.greendao.annotation.Convert;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Keep;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.ToOne;
+import org.joda.time.DateTime;
 
 import java.io.Serializable;
-import java.util.Date;
 
 
 /**
@@ -26,7 +29,8 @@ public class CertInsemArt implements Serializable {
 	private long id_CertIA;
 
 	@Property(nameInDb="DateInsem")
-	private Date dateInsem;
+	@Convert(converter = DateTimeConverter.class,columnType = String.class)
+	private DateTime dateInsem;
 
 	@Property(nameInDb="Export")
 	private boolean export;
@@ -70,9 +74,11 @@ public class CertInsemArt implements Serializable {
 
 	public CertInsemArt() {
 	}
-	@Generated(hash = 1960665682)
-	public CertInsemArt(long id_CertIA, Date dateInsem, boolean export, int id_Regl,
-									String numCertIA, String numRecu, long CodeOper, long CodeUP) {
+
+	@Generated(hash = 86613)
+	public CertInsemArt(long id_CertIA, DateTime dateInsem, boolean export,
+									int id_Regl, String numCertIA, String numRecu, long CodeOper,
+									long CodeUP) {
 					this.id_CertIA = id_CertIA;
 					this.dateInsem = dateInsem;
 					this.export = export;
@@ -82,6 +88,7 @@ public class CertInsemArt implements Serializable {
 					this.CodeOper = CodeOper;
 					this.CodeUP = CodeUP;
 	}
+
 	@Keep
 	public long getId_CertIA() {
 		return this.id_CertIA;
@@ -91,11 +98,11 @@ public class CertInsemArt implements Serializable {
 		this.id_CertIA = id_CertIA;
 	}
 	@Keep
-	public Date getDateInsem() {
+	public DateTime getDateInsem() {
 		return this.dateInsem;
 	}
 	@Keep
-	public void setDateInsem(Date dateInsem) {
+	public void setDateInsem(DateTime dateInsem) {
 		this.dateInsem = dateInsem;
 	}
 	@Keep

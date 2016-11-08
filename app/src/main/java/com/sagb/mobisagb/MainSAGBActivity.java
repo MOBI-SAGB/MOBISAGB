@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.sagb.mobisagb.insemination.InsemArtificielActivity;
+
 
 public class MainSAGBActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -108,6 +110,10 @@ public class MainSAGBActivity extends AppCompatActivity
             startActivity(intent);
             return true;
         } else if (id == R.id.recensement_nav) {
+
+            Intent intent = new Intent(getApplicationContext(),InsemArtificielActivity.class);
+            startActivity(intent);
+            return true;
 
         } else if (id == R.id.autres_nav) {
 

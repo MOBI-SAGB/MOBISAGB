@@ -60,10 +60,13 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
        View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent,false);
 
-       ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(semences.get(position).getCertInsemArt().getDateInsem().toString());
+        String date_insem = semences.get(position).getCertInsemArt().getDateInsem().toString(DateTimeConverter.SIMPLE_DATE_FORMATTER);
+
+       ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(date_insem);
        ((TextView) rootView.findViewById(R.id.numVacheSemence_tv)).setText(semences.get(position).getId_Animal()+"");
        ((TextView) rootView.findViewById(R.id.taureauSemence_tv)).setText(semences.get(position).getSemence().getNomTaureau());
        ((TextView) rootView.findViewById(R.id.orderSemence_tv)).setText(semences.get(position).getOrdreIA()+"");
+
 
         return rootView;
     }
