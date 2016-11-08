@@ -21,4 +21,5 @@
     <string name="champ_obligatoir">champ obligatoire</string>
     <string name="export_import">Export / Import</string>
     <string name="action_logout">Déconnexion</string>
+    <string name="title_activity_identification">Identification des animaux</string>
 </resources>

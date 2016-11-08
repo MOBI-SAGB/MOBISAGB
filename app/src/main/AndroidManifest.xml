@@ -3,18 +3,13 @@
     package="com.sagb.mobisagb">
 
     <application
+        android:name=".Cluser"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".LoginActivity" />
         <activity
             android:name=".MainSAGBActivity"
             android:label="@string/title_activity_main_sagb"
@@ -26,13 +21,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sagb.mobisagb.ControleLaitActivity"
+            android:name=".ControleLaitActivity"
             android:label="@string/title_activity_controle_lait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".IdentificationActivity"
+            android:label="@string/title_activity_identification"
+            android:parentActivityName=".MainSAGBActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sagb.mobisagb.MainSAGBActivity" />
         </activity>
     </application>
 

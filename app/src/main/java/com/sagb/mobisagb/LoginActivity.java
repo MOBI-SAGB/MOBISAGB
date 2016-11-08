@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
         if (!isError) {
+            ((Cluser)getApplication()).getLoginManager().SaveLogin(1,username,username,4);
             Intent intent = new Intent(getApplicationContext(),MainSAGBActivity.class);
             startActivity(intent);
             finish();
