@@ -13,9 +13,11 @@
         android:orientation="horizontal"
         >
        <TextView
-           android:layout_width="wrap_content"
+           android:layout_width="@dimen/text_view_120"
            android:layout_height="wrap_content"
+
            android:text="@string/NumCertIA"/>
+
         <Spinner
             android:id="@+id/NumCertIA_sp"
             android:layout_width="match_parent"
@@ -31,11 +33,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/text_view_120"
             android:layout_height="wrap_content"
             android:text="@string/ModeReglement"/>
-        <AutoCompleteTextView
-            android:id="@+id/modeReglement"
+        <Spinner
+            android:id="@+id/modeReglement_sp"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             android:layout_marginTop="5dp"
@@ -50,7 +52,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/text_view_120"
             android:layout_height="wrap_content"
             android:text="@string/DateCertIA"/>
     <TextView

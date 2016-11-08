@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.sagb.mobisagb.InsemArtificielActivity"
+    tools:context="com.sagb.mobisagb.insemination.InsemArtificielActivity"
     tools:showIn="@layout/activity_insem_artificiel">
 
     <android.support.v4.view.ViewPager

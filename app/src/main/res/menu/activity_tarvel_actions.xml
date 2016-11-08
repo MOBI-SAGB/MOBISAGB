@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sagb.mobisagb.ControleLaitActivity">
+
+
+    <!-- Show next travels -->
+    <item android:id="@+id/action_add_travel"
+          android:icon="@drawable/ic_menu_send"
+          android:title="send"
+        app:showAsAction="ifRoom" />
+       
+    <!-- Show next travels -->
+    
+    <item android:id="@+id/action_show_travels"
+          android:icon="@drawable/ic_menu_camera"
+        android:title="camera"
+        app:showAsAction="ifRoom" />
+ 
+    <!-- Help -->
+    <item android:id="@+id/action_edit_travel"
+          android:icon="@drawable/ic_menu_share"
+        android:title="share"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>
