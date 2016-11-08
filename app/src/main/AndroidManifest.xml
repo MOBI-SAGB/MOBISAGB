@@ -15,8 +15,18 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainSAGBActivity" />
         <activity
+            android:name=".MainSAGBActivity"
+            android:label="@string/app_sagb"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".insemination.InsemArtificielActivity"
-            android:label="@string/title_activity_main_sagb"
+            android:label="isem"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +45,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".insemination.TravelBarActivity"
+            android:parentActivityName=".MainSAGBActivity" />
+        <activity
             android:name=".IdentificationActivity"
             android:label="@string/title_activity_identification"
             android:parentActivityName=".MainSAGBActivity"
@@ -43,9 +56,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sagb.mobisagb.MainSAGBActivity" />
         </activity>
-        <activity android:name=".insemination.TravelBarActivity"
-            android:parentActivityName=".MainSAGBActivity"
-            />
     </application>
 
 </manifest>
