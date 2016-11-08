@@ -1,5 +1,6 @@
 package com.sagb.mobisagb;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.TextView;
 
 public class ControleLaitActivity extends AppCompatActivity {
 
@@ -91,6 +95,8 @@ public class ControleLaitActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private TextView datecontrole_tv;
+        String date="";
 
         public PlaceholderFragment() {
         }
@@ -113,6 +119,40 @@ public class ControleLaitActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_controle_lait, container, false);
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            datecontrole_tv=(TextView) rootView.findViewById(R.id.datecontrole_tv);
+            datecontrole_tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    final Dialog dialog =  new Dialog(getActivity());
+
+                    dialog.setContentView(R.layout.calendar);
+                    CalendarView cal=(CalendarView)dialog.findViewById(R.id.calendarView1);
+                    Button pickDate=(Button)dialog.findViewById(R.id.pickDateTime);
+                    pickDate.setOnClickListener(new View.OnClickListener() {
+
+                        @Override
+                        public void onClick(View v) {
+
+                            datecontrole_tv.setText(date);
+                            dialog.dismiss();
+
+                        }
+                    });
+                    cal.setHorizontalScrollBarEnabled(true);
+                    cal.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+                        @Override
+                        public void onSelectedDayChange(CalendarView view, int year, int month,int dayOfMonth) {
+
+                            date=dayOfMonth+" / "+month+" / "+year;
+
+                        }
+                    });
+
+                    dialog.show();
+
+                }
+            });
             return rootView;
         }
     }
