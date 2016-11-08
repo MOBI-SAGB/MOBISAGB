@@ -3,8 +3,9 @@ package com.sagb.mobisagb;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.view.View;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,9 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-
-import com.sagb.mobisagb.insemination.InsemArtificielActivity;
 
 
 public class MainSAGBActivity extends AppCompatActivity
@@ -104,7 +102,7 @@ public class MainSAGBActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Intent it;
+
         if (id == R.id.newdate_nav) {
             Intent intent = new Intent(getApplicationContext(),IdentificationActivity.class);
             startActivity(intent);
@@ -112,8 +110,6 @@ public class MainSAGBActivity extends AppCompatActivity
         } else if (id == R.id.recensement_nav) {
 
         } else if (id == R.id.autres_nav) {
-            it  = new Intent(MainSAGBActivity.this,InsemArtificielActivity.class);
-            startActivity(it);
 
         } else if (id == R.id.import_nav) {
 
