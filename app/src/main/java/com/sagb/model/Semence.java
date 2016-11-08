@@ -6,17 +6,26 @@ import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
 
 
-@Entity
+@Entity(nameInDb = "Semences")
 public class Semence {
 
     @Id
     @Property(nameInDb = "Id_Semence")
     private long Id_Semence;
 
+    @Property(nameInDb = "Id_ChoixSem")
     private long Id_ChoixSem;
+
+    @Property(nameInDb = "NomTaureau")
     private String  NomTaureau;
+
+    @Property(nameInDb = "Id_Race")
     private long Id_Race;
+
+    @Property(nameInDb = "SemActif")
     private String SemActif;
+
+    @Property(nameInDb = "Id_OrigAnim")
     private long Id_OrigAnim;
 
 

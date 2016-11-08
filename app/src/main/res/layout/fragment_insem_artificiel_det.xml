@@ -64,10 +64,48 @@
         android:text="@string/DateCertIA"
         android:textAlignment="center" />
 </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueciel"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:text="Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:textStyle="bold"
+            android:layout_weight="0.25" />
+
+        <TextView
+            android:text="N° Vache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:textStyle="bold"
+            android:layout_weight="0.25" />
+
+        <TextView
+            android:text="Taureau"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:layout_weight="0.25" />
+
+        <TextView
+            android:text="Ordre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:textStyle="bold"
+            android:layout_weight="0.25" />
+    </LinearLayout>
 <ListView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/DetIA">
+    android:layout_marginTop="2dp"
+    android:id="@+id/DetIA_lv">
 
 </ListView>
 
