@@ -23,7 +23,7 @@ public class CertInsemArt implements Serializable {
 
 	@Id
 	@Property(nameInDb="Id_CertIA")
-	private int id_CertIA;
+	private long id_CertIA;
 
 	@Property(nameInDb="DateInsem")
 	private Date dateInsem;
@@ -70,8 +70,8 @@ public class CertInsemArt implements Serializable {
 
 	public CertInsemArt() {
 	}
-	@Generated(hash = 1042074291)
-	public CertInsemArt(int id_CertIA, Date dateInsem, boolean export, int id_Regl,
+	@Generated(hash = 1960665682)
+	public CertInsemArt(long id_CertIA, Date dateInsem, boolean export, int id_Regl,
 									String numCertIA, String numRecu, long CodeOper, long CodeUP) {
 					this.id_CertIA = id_CertIA;
 					this.dateInsem = dateInsem;
@@ -83,11 +83,11 @@ public class CertInsemArt implements Serializable {
 					this.CodeUP = CodeUP;
 	}
 	@Keep
-	public int getId_CertIA() {
+	public long getId_CertIA() {
 		return this.id_CertIA;
 	}
 	@Keep
-	public void setId_CertIA(int id_CertIA) {
+	public void setId_CertIA(long id_CertIA) {
 		this.id_CertIA = id_CertIA;
 	}
 	@Keep
