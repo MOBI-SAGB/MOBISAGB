@@ -12,10 +12,11 @@ import org.greenrobot.greendao.annotation.NotNull;
  * Created by USER on 08/11/16.
  */
 
-@Entity
+@Entity(nameInDb = "DetCertInsemArt")
 public class DetCertInsemArt {
 
     @Id
+    @Property(nameInDb = "Id_DetCertIA")
     private long Id_DetCertIA;
 
     @Property(nameInDb = "Id_Semence")

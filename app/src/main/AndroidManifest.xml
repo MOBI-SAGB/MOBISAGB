@@ -2,15 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sagb.mobisagb">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".insemination.InsemArtificielActivity" />
+        <activity android:name=".LoginActivity" />
         <activity
-            android:name=".MainSAGBActivity"
+            android:name=".insemination.InsemArtificielActivity"
             android:label="@string/title_activity_main_sagb"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -38,7 +42,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sagb.mobisagb.MainSAGBActivity" />
         </activity>
-        <activity android:name=".insemination.InsemArtificielActivity"
+        <activity android:name=".insemination.TravelBarActivity"
             android:parentActivityName=".MainSAGBActivity"
             />
     </application>

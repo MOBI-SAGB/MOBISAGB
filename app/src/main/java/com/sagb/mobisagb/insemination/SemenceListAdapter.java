@@ -58,7 +58,7 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-       View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent);
+       View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent,false);
 
        ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(semences.get(position).getCertInsemArt().getDateInsem().toString());
        ((TextView) rootView.findViewById(R.id.numVacheSemence_tv)).setText(semences.get(position).getId_Animal()+"");
