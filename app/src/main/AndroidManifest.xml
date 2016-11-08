@@ -45,6 +45,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".insemination.TravelBarActivity"
+            android:parentActivityName=".MainSAGBActivity" />
+        <activity
             android:name=".IdentificationActivity"
             android:label="@string/title_activity_identification"
             android:parentActivityName=".MainSAGBActivity"
@@ -53,9 +56,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sagb.mobisagb.MainSAGBActivity" />
         </activity>
-        <activity android:name=".insemination.TravelBarActivity"
-            android:parentActivityName=".MainSAGBActivity"
-            />
     </application>
 
 </manifest>
