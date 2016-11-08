@@ -1,23 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:text="Button"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3" />
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:src="@mipmap/ic_sunny"
+            android:layout_height="150dp"
+            android:layout_width="150dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_weight="0.08" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:src="@mipmap/ic_moon"
+            android:layout_height="150dp"
+            android:layout_width="150dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_weight="0.08" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:src="@mipmap/ic_moon"
+            android:layout_height="150dp"
+            android:layout_width="150dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_weight="0.08" />
+
+
+    </LinearLayout>
 
     <Button
-        android:text="Button"
+        android:text="Mouvements"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2" />
+        android:id="@+id/mouvement_btn" />
 
     <Button
-        android:text="Button"
+        android:text="Evénements"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:id="@+id/evenements_btn" />
+
+    <Button
+        android:id="@+id/v_identifiees_btn"
+        android:text="Vaches identifiées"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_about_light"
+        />
+    <Button
+        android:id="@+id/production_btn"
+        android:text="Visualiser la production"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_about_light"
+        />
+    <Button
+        android:id="@+id/retour_btn"
+        android:text="Retour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_about_light"
+        />
 </LinearLayout>
