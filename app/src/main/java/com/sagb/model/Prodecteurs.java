@@ -1,6 +1,7 @@
 package com.sagb.model;
 
 import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.ToOne;
 
@@ -13,11 +14,17 @@ import org.greenrobot.greendao.annotation.NotNull;
 /**
  * Created by USER on 06/11/16.
  */
-@Entity
+@Entity(nameInDb ="Prodecteurs" )
 public class Prodecteurs {
 
+    @Id
+    @Property(nameInDb = "CodeProd" )
     private long CodeProd;
+
+    @Property(nameInDb = "RefProd" )
     private String RefProd;
+
+    @Property(nameInDb = "NomProd" )
     private String NomProd;
 
     @Property(nameInDb = "Id_Adh")
@@ -25,9 +32,11 @@ public class Prodecteurs {
 
     @ToOne(joinProperty = "Id_Adh")
     private  Adherent adherent ;
+
     /** Used to resolve relations */
     @Generated(hash = 2040040024)
     private transient DaoSession daoSession;
+
     /** Used for active entity operations. */
     @Generated(hash = 616009829)
     private transient ProdecteursDao myDao;
@@ -148,11 +157,15 @@ public class Prodecteurs {
         myDao.update(this);
     }
 
+    @Override
+    public String toString() {
+        return NomProd;
+    }
+
     /** called by internal mechanisms, do not call yourself. */
     @Generated(hash = 768337085)
     public void __setDaoSession(DaoSession daoSession) {
         this.daoSession = daoSession;
         myDao = daoSession != null ? daoSession.getProdecteursDao() : null;
     }
-
 }

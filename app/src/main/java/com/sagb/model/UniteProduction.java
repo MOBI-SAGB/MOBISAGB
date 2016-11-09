@@ -8,7 +8,7 @@ import org.greenrobot.greendao.annotation.Property;
 /**
  * Created by USER on 05/11/16.
  */
-@Entity
+@Entity(nameInDb ="UniteProduction" )
 public class UniteProduction {
 
     @Id
@@ -16,13 +16,25 @@ public class UniteProduction {
     @Property(nameInDb = "CodeUP")
     private long CodeUP;
 
-
+    @Property(nameInDb = "CodeProd" )
     private long CodeProd;
+
+    @Property(nameInDb = "StrinRefUP" )
     private String StrinRefUP;
+
+    @Property(nameInDb = "NomUP" )
     private String NomUP;
+
+    @Property(nameInDb = "CtrLait" )
     private String CtrLait;
+
+    @Property(nameInDb = "NewUP" )
     private String NewUP;
+
+    @Property(nameInDb = "Export" )
     private boolean Export;
+
+    @Property(nameInDb = "Code_Zone" )
     private long Code_Zone;
 
     @Generated(hash = 1346533026)
@@ -111,5 +123,8 @@ public class UniteProduction {
         return this.Export;
     }
 
-
+    @Override
+    public String toString() {
+        return NomUP;
+    }
 }
