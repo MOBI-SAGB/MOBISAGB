@@ -12,7 +12,9 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.sagb.mobisagb.IdentificationActivity"
-    tools:showIn="@layout/activity_identification">
+    tools:showIn="@layout/activity_identification"
+    android:background="@color/colorPrimaryDark"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,6 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Libadherent"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
             />
         <Spinner
             android:id="@+id/adherent_sp"
@@ -38,7 +43,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/producteur"
-
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
             />
         <Spinner
             android:id="@+id/producteurs_sp"
@@ -56,6 +63,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/unit_de_production"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
             />
         <Spinner
             android:id="@+id/unite_production_sp"

@@ -14,8 +14,8 @@ import org.greenrobot.greendao.annotation.NotNull;
 /**
  * Created by USER on 06/11/16.
  */
-@Entity(nameInDb ="Prodecteurs" )
-public class Prodecteurs {
+@Entity(nameInDb ="Producteurs" )
+public class Producteurs {
 
     @Id
     @Property(nameInDb = "CodeProd" )
@@ -38,19 +38,19 @@ public class Prodecteurs {
     private transient DaoSession daoSession;
 
     /** Used for active entity operations. */
-    @Generated(hash = 616009829)
-    private transient ProdecteursDao myDao;
+    @Generated(hash = 676246350)
+    private transient ProducteursDao myDao;
 
-    @Generated(hash = 603029601)
-    public Prodecteurs(long CodeProd, String RefProd, String NomProd, long Id_Adh) {
+    @Generated(hash = 76916964)
+    public Producteurs(long CodeProd, String RefProd, String NomProd, long Id_Adh) {
         this.CodeProd = CodeProd;
         this.RefProd = RefProd;
         this.NomProd = NomProd;
         this.Id_Adh = Id_Adh;
     }
 
-    @Generated(hash = 519144390)
-    public Prodecteurs() {
+    @Generated(hash = 1527668709)
+    public Producteurs() {
     }
 
     public long getCodeProd() {
@@ -163,9 +163,9 @@ public class Prodecteurs {
     }
 
     /** called by internal mechanisms, do not call yourself. */
-    @Generated(hash = 768337085)
+    @Generated(hash = 764670361)
     public void __setDaoSession(DaoSession daoSession) {
         this.daoSession = daoSession;
-        myDao = daoSession != null ? daoSession.getProdecteursDao() : null;
+        myDao = daoSession != null ? daoSession.getProducteursDao() : null;
     }
 }

@@ -19,8 +19,8 @@ public class UniteProduction {
     @Property(nameInDb = "CodeProd" )
     private long CodeProd;
 
-    @Property(nameInDb = "StrinRefUP" )
-    private String StrinRefUP;
+    @Property(nameInDb = "RefUP" )
+    private String RefUP;
 
     @Property(nameInDb = "NomUP" )
     private String NomUP;
@@ -37,13 +37,12 @@ public class UniteProduction {
     @Property(nameInDb = "Code_Zone" )
     private long Code_Zone;
 
-    @Generated(hash = 1346533026)
-    public UniteProduction(long CodeUP, long CodeProd, String StrinRefUP,
-            String NomUP, String CtrLait, String NewUP, boolean Export,
-            long Code_Zone) {
+    @Generated(hash = 1690908464)
+    public UniteProduction(long CodeUP, long CodeProd, String RefUP, String NomUP,
+            String CtrLait, String NewUP, boolean Export, long Code_Zone) {
         this.CodeUP = CodeUP;
         this.CodeProd = CodeProd;
-        this.StrinRefUP = StrinRefUP;
+        this.RefUP = RefUP;
         this.NomUP = NomUP;
         this.CtrLait = CtrLait;
         this.NewUP = NewUP;
@@ -72,11 +71,11 @@ public class UniteProduction {
     }
 
     public String getStrinRefUP() {
-        return StrinRefUP;
+        return RefUP;
     }
 
     public void setStrinRefUP(String strinRefUP) {
-        StrinRefUP = strinRefUP;
+        RefUP = strinRefUP;
     }
 
     public String getNomUP() {
@@ -126,5 +125,13 @@ public class UniteProduction {
     @Override
     public String toString() {
         return NomUP;
+    }
+
+    public String getRefUP() {
+        return this.RefUP;
+    }
+
+    public void setRefUP(String RefUP) {
+        this.RefUP = RefUP;
     }
 }
