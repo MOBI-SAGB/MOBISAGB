@@ -68,6 +68,9 @@
     </string-array>
 
     <string name="title_activity_identification">Identification des animaux</string>
+    <string name="Libadherent">Adhérent :</string>
+    <string name="producteur">Producteur :</string>
+    <string name="unit_de_production">Unité de production :</string>
 
 
 </resources>

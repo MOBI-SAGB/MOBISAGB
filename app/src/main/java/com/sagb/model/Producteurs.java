@@ -1,6 +1,7 @@
 package com.sagb.model;
 
 import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.ToOne;
 
@@ -13,11 +14,17 @@ import org.greenrobot.greendao.annotation.NotNull;
 /**
  * Created by USER on 06/11/16.
  */
-@Entity
-public class Prodecteurs {
+@Entity(nameInDb ="Producteurs" )
+public class Producteurs {
 
+    @Id
+    @Property(nameInDb = "CodeProd" )
     private long CodeProd;
+
+    @Property(nameInDb = "RefProd" )
     private String RefProd;
+
+    @Property(nameInDb = "NomProd" )
     private String NomProd;
 
     @Property(nameInDb = "Id_Adh")
@@ -25,23 +32,25 @@ public class Prodecteurs {
 
     @ToOne(joinProperty = "Id_Adh")
     private  Adherent adherent ;
+
     /** Used to resolve relations */
     @Generated(hash = 2040040024)
     private transient DaoSession daoSession;
-    /** Used for active entity operations. */
-    @Generated(hash = 616009829)
-    private transient ProdecteursDao myDao;
 
-    @Generated(hash = 603029601)
-    public Prodecteurs(long CodeProd, String RefProd, String NomProd, long Id_Adh) {
+    /** Used for active entity operations. */
+    @Generated(hash = 676246350)
+    private transient ProducteursDao myDao;
+
+    @Generated(hash = 76916964)
+    public Producteurs(long CodeProd, String RefProd, String NomProd, long Id_Adh) {
         this.CodeProd = CodeProd;
         this.RefProd = RefProd;
         this.NomProd = NomProd;
         this.Id_Adh = Id_Adh;
     }
 
-    @Generated(hash = 519144390)
-    public Prodecteurs() {
+    @Generated(hash = 1527668709)
+    public Producteurs() {
     }
 
     public long getCodeProd() {
@@ -148,11 +157,15 @@ public class Prodecteurs {
         myDao.update(this);
     }
 
-    /** called by internal mechanisms, do not call yourself. */
-    @Generated(hash = 768337085)
-    public void __setDaoSession(DaoSession daoSession) {
-        this.daoSession = daoSession;
-        myDao = daoSession != null ? daoSession.getProdecteursDao() : null;
+    @Override
+    public String toString() {
+        return NomProd;
     }
 
+    /** called by internal mechanisms, do not call yourself. */
+    @Generated(hash = 764670361)
+    public void __setDaoSession(DaoSession daoSession) {
+        this.daoSession = daoSession;
+        myDao = daoSession != null ? daoSession.getProducteursDao() : null;
+    }
 }
