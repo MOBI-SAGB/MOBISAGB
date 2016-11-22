@@ -15,15 +15,15 @@ import org.greenrobot.greendao.annotation.NotNull;
 @Entity(nameInDb = "DetCertInsemArt")
 public class DetCertInsemArt {
 
-    @Id
+    @Id(autoincrement = true)
     @Property(nameInDb = "Id_DetCertIA")
-    private long Id_DetCertIA;
+    private Long Id_DetCertIA;
 
     @Property(nameInDb = "Id_Semence")
     private  long Id_Semence;
 
     @Property(nameInDb = "OrdreIA")
-    private  long OrdreIA;
+    private  String OrdreIA;
 
     @Property(nameInDb = "SignChal")
     private  String SignChal;
@@ -44,7 +44,7 @@ public class DetCertInsemArt {
     private  long export;
 
     @Property(nameInDb = "Motif_Reset")
-    private  long motifReset;
+    private  String motifReset;
 
     @Property(nameInDb = "SNIT")
     private  boolean snit;
@@ -62,6 +62,7 @@ public class DetCertInsemArt {
     @ToOne(joinProperty = "Id_Animal")
     private  Troupeau animal;
 
+
     /** Used to resolve relations */
     @Generated(hash = 2040040024)
     private transient DaoSession daoSession;
@@ -70,11 +71,10 @@ public class DetCertInsemArt {
     @Generated(hash = 491907913)
     private transient DetCertInsemArtDao myDao;
 
-    @Generated(hash = 2077289039)
-    public DetCertInsemArt(long Id_DetCertIA, long Id_Semence, long OrdreIA,
-            String SignChal, double PrixSem, long Id_Animal, long Id_CertIA,
-            long NumLact, long export, long motifReset, boolean snit,
-            boolean modif) {
+    @Generated(hash = 944640108)
+    public DetCertInsemArt(Long Id_DetCertIA, long Id_Semence, String OrdreIA, String SignChal,
+            double PrixSem, long Id_Animal, long Id_CertIA, long NumLact, long export,
+            String motifReset, boolean snit, boolean modif) {
         this.Id_DetCertIA = Id_DetCertIA;
         this.Id_Semence = Id_Semence;
         this.OrdreIA = OrdreIA;
@@ -93,7 +93,7 @@ public class DetCertInsemArt {
     public DetCertInsemArt() {
     }
 
-    public long getId_DetCertIA() {
+    public Long getId_DetCertIA() {
         return this.Id_DetCertIA;
     }
 
@@ -109,11 +109,11 @@ public class DetCertInsemArt {
         this.Id_Semence = Id_Semence;
     }
 
-    public long getOrdreIA() {
+    public String getOrdreIA() {
         return this.OrdreIA;
     }
 
-    public void setOrdreIA(long OrdreIA) {
+    public void setOrdreIA(String OrdreIA) {
         this.OrdreIA = OrdreIA;
     }
 
@@ -165,11 +165,11 @@ public class DetCertInsemArt {
         this.export = export;
     }
 
-    public long getMotifReset() {
+    public String getMotifReset() {
         return this.motifReset;
     }
 
-    public void setMotifReset(long motifReset) {
+    public void setMotifReset(String motifReset) {
         this.motifReset = motifReset;
     }
 
@@ -332,6 +332,10 @@ public class DetCertInsemArt {
             Id_Animal = animal.getId_animal();
             animal__resolvedKey = Id_Animal;
         }
+    }
+
+    public void setId_DetCertIA(Long Id_DetCertIA) {
+        this.Id_DetCertIA = Id_DetCertIA;
     }
 
     /** called by internal mechanisms, do not call yourself. */

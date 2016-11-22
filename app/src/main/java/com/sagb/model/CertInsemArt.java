@@ -1,6 +1,9 @@
 package com.sagb.model;
 
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.sagb.mobisagb.insemination.DateTimeConverter;
 
 import org.greenrobot.greendao.DaoException;
@@ -21,12 +24,12 @@ import java.io.Serializable;
  * 
  */
 @Entity(nameInDb = "CertInsemArt")
-public class CertInsemArt implements Serializable {
+public class CertInsemArt implements Serializable , Parcelable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@Property(nameInDb="Id_CertIA")
-	private long id_CertIA;
+	private Long id_CertIA;
 
 	@Property(nameInDb="DateInsem")
 	@Convert(converter = DateTimeConverter.class,columnType = String.class)
@@ -74,11 +77,52 @@ public class CertInsemArt implements Serializable {
 
 	public CertInsemArt() {
 	}
+	public int describeContents() {
+		return 0;
+	}
 
-	@Generated(hash = 86613)
-	public CertInsemArt(long id_CertIA, DateTime dateInsem, boolean export,
-									int id_Regl, String numCertIA, String numRecu, long CodeOper,
-									long CodeUP) {
+	public void writeToParcel(Parcel out, int flags) {
+		out.writeString(this.numCertIA);
+		out.writeInt(this.id_Regl);
+		out.writeLong(this.CodeOper);
+		out.writeLong(this.CodeUP);
+		out.writeLong(this.id_CertIA);
+		boolean[] b  = {this.export};
+		out.writeBooleanArray(b);
+		out.writeString(this.numRecu);
+		out.writeString(this.dateInsem.toString(DateTimeConverter.SIMPLE_DATE_FORMATTER));
+
+	}
+
+	public static final Parcelable.Creator<CertInsemArt> CREATOR
+			= new Parcelable.Creator<CertInsemArt>() {
+		public CertInsemArt createFromParcel(Parcel in) {
+			return new CertInsemArt(in);
+		}
+
+		public CertInsemArt[] newArray(int size) {
+			return new CertInsemArt[size];
+		}
+	};
+
+	private CertInsemArt(Parcel in) {
+
+		this.numCertIA=in.readString();
+		this.id_Regl = in.readInt();
+		this.CodeOper = in.readLong();
+		this.CodeUP = in.readLong();
+		this.id_CertIA = in.readLong();
+		boolean[] b ={};
+		in.readBooleanArray(b);
+		this.export = (b.length>0)?b[0]:false;
+		this.numRecu = in.readString();
+		this.dateInsem = DateTime.parse(in.readString(),DateTimeConverter.SIMPLE_DATE_FORMATTER);
+	}
+
+
+	@Generated(hash = 1942123883)
+	public CertInsemArt(Long id_CertIA, DateTime dateInsem, boolean export, int id_Regl,
+									String numCertIA, String numRecu, long CodeOper, long CodeUP) {
 					this.id_CertIA = id_CertIA;
 					this.dateInsem = dateInsem;
 					this.export = export;
@@ -88,13 +132,12 @@ public class CertInsemArt implements Serializable {
 					this.CodeOper = CodeOper;
 					this.CodeUP = CodeUP;
 	}
-
 	@Keep
-	public long getId_CertIA() {
+	public Long getId_CertIA() {
 		return this.id_CertIA;
 	}
 	@Keep
-	public void setId_CertIA(long id_CertIA) {
+	public void setId_CertIA(Long id_CertIA) {
 		this.id_CertIA = id_CertIA;
 	}
 	@Keep

@@ -15,46 +15,69 @@ public class Troupeau implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@Property(nameInDb = "id_animal")
 	private long id_animal;
 
-	@Property(nameInDb = "codeup")
 	private String codeup;
+	private String codeetat;
+	private String id_raceanim;
+	private String id_origanim;
+	@Property(nameInDb = "NNI_BOVIN")
+	private String nni_bovin;
+	private String statut;
+	private String numlact;
+	private String numctrl;
+	private Date datedervel;
+	private String codeoper;
+	private String id_origmere;
+	private String id_origpere;
 
-    private String codeetat;
-    private String id_raceanim;
-    private String id_origanim;
-    private String  nni_bovin;
-    private String statut;
-    private String numlact;
-    private String numctrl;
-    private Date datedervel;
-    private String codeoper;
-    private String id_origmere;
-    private String id_origpere;
-    private String id_origGPM;
-    private String NumAncien;
-    private String NumTravail;
-    private String NumCarte;
-    private Date DateIdent;
-    private Date DateNaiss;
-    private Date DateEntree;
-    private String NNI_Mere;
-    private String NomPere;
-    private String NomGPM;
-    private String LieuIdent;
-    private String SexeAnim;
-    private Date DateDerCntr;
-    private Date DateDerCG;
-    private Date DateDerInsem;
-    private String OrdreInsem;
-    private Date  DateDerTaris;
-    private String NV_NNI;
-    private String Num_Travail_Snit;
-    private String Snit_Mere;
-    private String Id_Mere;
+	@Property(nameInDb = "id_origGPM")
+	private String id_origGPM;
+
+	@Property(nameInDb = "NumAncien")
+	private String NumAncien;
+
+	@Property(nameInDb = "NumTravail")
+	private String NumTravail;
+	@Property(nameInDb = "NumCarte")
+	private String NumCarte;
+	@Property(nameInDb = "DateIdent")
+	private Date DateIdent;
+	@Property(nameInDb = "DateNaiss")
+	private Date DateNaiss;
+	@Property(nameInDb = "DateEntree")
+	private Date DateEntree;
+	@Property(nameInDb = "NNI_Mere")
+	private String NNI_Mere;
+	@Property(nameInDb = "NomPere")
+	private String NomPere;
+	@Property(nameInDb = "NomGPM")
+	private String NomGPM;
+	@Property(nameInDb = "LieuIdent")
+	private String LieuIdent;
+	@Property(nameInDb = "SexeAnim")
+	private String SexeAnim;
+	@Property(nameInDb = "DateDerCntr")
+	private Date DateDerCntr;
+	@Property(nameInDb = "DateDerCG")
+	private Date DateDerCG;
+	@Property(nameInDb = "DateDerInsem")
+	private Date DateDerInsem;
+	@Property(nameInDb = "OrdreInsem")
+	private String OrdreInsem;
+	@Property(nameInDb = "DateDerTaris")
+	private Date DateDerTaris;
+	@Property(nameInDb = "NV_NNI")
+	private String NV_NNI;
+	@Property(nameInDb = "Num_Travail_Snit")
+	private String Num_Travail_Snit;
+	@Property(nameInDb = "Snit_Mere")
+	private String Snit_Mere;
+	@Property(nameInDb = "Id_Mere")
+	private String Id_Mere;
 	
 	public Troupeau() {
 	
@@ -384,6 +407,9 @@ public class Troupeau implements Serializable {
 		Id_Mere = id_Mere;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "SNIT: "+nni_bovin+" , IGB: "+NV_NNI;
+	}
 
 }

@@ -10,8 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.sagb.mobisagb.R;
-import com.sagb.model.CertInsemArt;
 import com.sagb.model.DetCertInsemArt;
+import com.sagb.model.TarifSemence;
 
 import java.util.List;
 
@@ -28,8 +28,8 @@ public class DetCertIAListAdapter extends ArrayAdapter<DetCertInsemArt> {
     public DetCertIAListAdapter(Context ctxt, List<DetCertInsemArt> semences) {
 
         super(ctxt, -1);
+
         this.context = ctxt;
-        //semenceDao = App.getDaoSession(context).getDetCertInsemArtDao();
 
         this.semences = semences;
 
@@ -43,12 +43,27 @@ public class DetCertIAListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
     @Override
     public int getCount() {
-        return semences.size();
+        return (semences!=null)?semences.size():0;
     }
 
     @Override
     public int getPosition(DetCertInsemArt item) {
         return semences.indexOf(item);
+    }
+
+    @Override
+    public void remove(DetCertInsemArt detCertInsemArt){
+        semences.remove(detCertInsemArt);
+        super.remove(detCertInsemArt);
+    }
+
+    public  void removeAll(){
+        if(semences!=null)
+        semences.clear();
+    }
+    public void setListDetCertIA(List<DetCertInsemArt> semences){
+        removeAll();
+        this.semences = semences;
     }
 
     @NonNull
@@ -57,19 +72,16 @@ public class DetCertIAListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-       View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent,false);
+       View rootView =  layoutInflater.inflate(R.layout.list_det_cert_ia_item,parent,false);
 
-        CertInsemArt certInsemArt = semences.get(position).getCertInsemArt();
-        String date_insem="";
+        String nni_vl = (semences.get(position).getAnimal().getNV_NNI() !=null && semences.get(position).getAnimal().getNV_NNI().length()>4)?semences.get(position).getAnimal().getNV_NNI():semences.get(position).getAnimal().getNni_bovin();
 
-        if(certInsemArt != null){
-            date_insem = certInsemArt.getDateInsem().toString(DateTimeConverter.SIMPLE_DATE_FORMATTER);
-        }
-
-       ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(date_insem);
-       ((TextView) rootView.findViewById(R.id.numVacheSemence_tv)).setText(semences.get(position).getId_Animal()+"");
-       ((TextView) rootView.findViewById(R.id.taureauSemence_tv)).setText(semences.get(position).getSemence().getNomTaureau());
-       ((TextView) rootView.findViewById(R.id.orderSemence_tv)).setText(semences.get(position).getOrdreIA()+"");
+        TarifSemence ts =semences.get(position).getSemence().getTarifSemence();
+        String cout  = (ts != null)? String.valueOf(ts.getPV_Adh1()):"";
+       ((TextView) rootView.findViewById(R.id.nni_vl)).setText(nni_vl);
+       ((TextView) rootView.findViewById(R.id.orderIA)).setText(semences.get(position).getOrdreIA()+"");
+       ((TextView) rootView.findViewById(R.id.taureau)).setText(semences.get(position).getSemence().getNomTaureau());
+       ((TextView) rootView.findViewById(R.id.cout)).setText(cout);
 
 
         return rootView;

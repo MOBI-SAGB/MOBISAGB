@@ -3,6 +3,7 @@ package com.sagb.model;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Property;
 
 import java.io.Serializable;
 
@@ -11,28 +12,34 @@ import java.io.Serializable;
  * The persistent class for the TarifSemences database table.
  * 
  */
-@Entity
+@Entity(nameInDb = "TarifSemences")
 public class TarifSemence implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int id_ChoixSem;
+	@Property(nameInDb = "id_ChoixSem")
+	private long id_ChoixSem;
 
+	@Property(nameInDb = "nomChoix")
 	private String nomChoix;
 
+	@Property(nameInDb = "PV_Adh1")
 	private int PV_Adh1;
 
+	@Property(nameInDb = "PV_AdhN")
 	private int PV_AdhN;
 
+	@Property(nameInDb = "PV_Part1")
 	private int PV_Part1;
 
+	@Property(nameInDb = "PV_PartN")
 	private int PV_PartN;
 
 	public TarifSemence() {
 	}
 
-	@Generated(hash = 326745448)
-	public TarifSemence(int id_ChoixSem, String nomChoix, int PV_Adh1, int PV_AdhN,
+	@Generated(hash = 439199590)
+	public TarifSemence(long id_ChoixSem, String nomChoix, int PV_Adh1, int PV_AdhN,
 									int PV_Part1, int PV_PartN) {
 					this.id_ChoixSem = id_ChoixSem;
 					this.nomChoix = nomChoix;
@@ -42,11 +49,11 @@ public class TarifSemence implements Serializable {
 					this.PV_PartN = PV_PartN;
 	}
 
-	public int getId_ChoixSem() {
+	public long getId_ChoixSem() {
 		return this.id_ChoixSem;
 	}
 
-	public void setId_ChoixSem(int id_ChoixSem) {
+	public void setId_ChoixSem(long id_ChoixSem) {
 		this.id_ChoixSem = id_ChoixSem;
 	}
 

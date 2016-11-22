@@ -10,9 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.sagb.mobisagb.R;
-import com.sagb.mobisagb.db.App;
+import com.sagb.model.CertInsemArt;
 import com.sagb.model.DetCertInsemArt;
-import com.sagb.model.DetCertInsemArtDao;
 
 import java.util.List;
 
@@ -23,16 +22,16 @@ import java.util.List;
 public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
     private Context context;
-    DetCertInsemArtDao semenceDao;
+   // DetCertInsemArtDao semenceDao;
     List<DetCertInsemArt> semences;
 
-    public SemenceListAdapter(Context ctxt) {
+    public SemenceListAdapter(Context ctxt,List<DetCertInsemArt> semences) {
 
         super(ctxt, -1);
         this.context = ctxt;
-        semenceDao = App.getDaoSession(context).getDetCertInsemArtDao();
+        //semenceDao = App.getDaoSession(context).getDetCertInsemArtDao();
 
-        semences =semenceDao.loadAll();
+        this.semences = semences;
 
     }
 
@@ -60,7 +59,12 @@ public class SemenceListAdapter extends ArrayAdapter<DetCertInsemArt> {
 
        View rootView =  layoutInflater.inflate(R.layout.list_semence_item,parent,false);
 
-        String date_insem = semences.get(position).getCertInsemArt().getDateInsem().toString(DateTimeConverter.SIMPLE_DATE_FORMATTER);
+        CertInsemArt certInsemArt = semences.get(position).getCertInsemArt();
+        String date_insem="";
+
+        if(certInsemArt != null){
+            date_insem = certInsemArt.getDateInsem().toString(DateTimeConverter.SIMPLE_DATE_FORMATTER);
+        }
 
        ((TextView) rootView.findViewById(R.id.dateSemence_tv)).setText(date_insem);
        ((TextView) rootView.findViewById(R.id.numVacheSemence_tv)).setText(semences.get(position).getId_Animal()+"");

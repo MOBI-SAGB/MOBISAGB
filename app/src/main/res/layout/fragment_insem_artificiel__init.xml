@@ -1,52 +1,199 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20sp"
     android:orientation="vertical"
     tools:context="com.sagb.mobisagb.insemination.InsemArtificiel_Init">
 
     <LinearLayout
-        android:id="@+id/layout1"
-        android:layout_marginTop="10dp"
+        android:id="@+id/L5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="@dimen/text_view_120"
+            android:layout_height="wrap_content"
+            android:text="@string/IGB"/>
+
+        <com.sagb.mobisagb.insemination.CustomAutoCompleteView
+            android:layout_width="wrap_content"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:completionThreshold="4"
+            android:id="@+id/IGB_et"
+            android:hint="IGB"
+            />
 
         <TextView
-            android:text="@string/NumCertIA"
+            android:layout_width="@dimen/text_view_120"
+            android:layout_height="wrap_content"
+            android:text="@string/SNIT"/>
+
+        <com.sagb.mobisagb.insemination.CustomAutoCompleteView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/numCertIA_tv" />
+            android:layout_weight="2"
+            android:inputType="number"
+            android:id="@+id/SNIT_et"
+            android:hint="@string/SNIT"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/L10"
+        android:layout_below="@id/L5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="@dimen/text_view_120"
+            android:layout_height="wrap_content"
+
+            android:text="@string/Taureau"/>
 
         <Spinner
-            android:layout_width="129dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/numCertIA_sp" />
-
-        <DatePicker
+            android:id="@+id/taureau_sp"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:calendarViewShown="false"
+            android:layout_height="40sp"
+            android:background="@drawable/edit_text"
             />
 
     </LinearLayout>
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_below="@id/layout1">
+    <LinearLayout
+        android:id="@+id/L7"
+        android:layout_below="@id/L10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="@dimen/text_view_120"
+            android:layout_height="wrap_content"
+            android:text="@string/Chaleur"/>
+        <Spinner
+            android:id="@+id/Chaleur_sp"
+            android:layout_width="205dp"
+            android:layout_height="40sp"
+            android:background="@drawable/edit_text"
+            android:hint="@string/Chaleur" />
 
-         <TextView
-             android:text="@string/ModeReglement"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:id="@+id/mode_reglement_tv" />
+        <TextView
+            android:layout_width="@dimen/text_view_120"
+            android:layout_height="wrap_content"
+            android:text="@string/OrdreIA"/>
 
-         <Spinner
-             android:layout_width="129dp"
-             android:layout_height="wrap_content"
-             android:id="@+id/mode_reglement_sp" />
+        <Spinner
+            android:id="@+id/OrdreIA_sp"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/edit_text"
+            android:hint="@string/OrdreIA" />
 
-     </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/L8"
+        android:layout_below="@id/L7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+
+        <TextView
+            android:layout_width="@dimen/text_view_120"
+            android:layout_height="wrap_content"
+            android:text="@string/Motif"/>
+
+        <Spinner
+            android:id="@+id/Motif_sp"
+            android:layout_width="wrap_content"
+            android:layout_weight="3"
+            android:layout_height="40sp"
+            android:background="@drawable/edit_text"
+            android:hint="@string/Motif" />
+        <CheckBox
+            android:id="@+id/Motif_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text"
+            android:hint="@string/Reset" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/L9"
+        android:layout_below="@id/L8"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/blueciel"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:text="NNI VL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView21"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Or. IA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView26"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Taureau"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView28"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Coût"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView29"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TableIA_lv"
+        android:layout_below="@id/L9"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/previous_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/refreshIA_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_save" />
 
 
 

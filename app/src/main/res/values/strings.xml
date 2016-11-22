@@ -25,15 +25,46 @@
 
     <!-- STRING INSEMINATION-->
 
+    <string name="titre_insem">Insémination artificielle</string>
     <string name="NumCertIA">N° Cert. I. A. :</string>
     <string name="ModeReglement">Mode réglement :</string>
     <string name="DateCertIA">Date Cert. I. A. :</string>
+    <string name="IGB">IGB :</string>
+    <string name="SNIT">SNIT  :</string>
+    <string name="Taureau">Taureau :</string>
+    <string name="OrdreIA">Ordre IA :</string>
+    <string name="Reset">Reset :</string>
+    <string name="Motif">Motif :</string>
+    <string name="Chaleur">Chaleur :</string>
+    <string name="continue_with_numCertIA">Ce certificat est déjà saisi, voulez-vous vraiment continuer ?</string>
+    <string name="question_del_detCertIA">voulez-vous vraiment supprimer ?</string>
 
     <!-- END INSEMINATION  -->
 
     <string-array name="mode_reg_array">
         <item>Prélèvement</item>
         <item>Comptant</item>
+    </string-array>
+    <string-array name="chaleur_array">
+        <item>Naturelles</item>
+        <item>Induites</item>
+    </string-array>
+    <string-array name="motif_reset_array">
+        <item>Velage</item>
+        <item>Avortement</item>
+        <item>4 Mois</item>
+    </string-array>
+    <string-array name="ordre_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
     </string-array>
 
     <string name="title_activity_identification">Identification des animaux</string>

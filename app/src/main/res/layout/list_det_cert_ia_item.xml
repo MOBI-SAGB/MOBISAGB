@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_marginTop="12dp"
+    android:layout_centerVertical="true"
     android:layout_height="40dp"
  >
 
@@ -8,9 +10,9 @@
         android:text="TextView"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/text_view_120"
         android:layout_height="wrap_content"
-        android:id="@+id/dateSemence_tv"
+        android:id="@+id/nni_vl"
         android:layout_weight="0.25" />
 
     <TextView
@@ -19,7 +21,7 @@
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/numVacheSemence_tv"
+        android:id="@+id/orderIA"
         android:layout_weight="0.25" />
 
     <TextView
@@ -28,7 +30,7 @@
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/taureauSemence_tv"
+        android:id="@+id/taureau"
         android:layout_weight="0.25" />
 
     <TextView
@@ -37,6 +39,8 @@
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/orderSemence_tv"
+        android:id="@+id/cout"
         android:layout_weight="0.25" />
+
+
 </LinearLayout>

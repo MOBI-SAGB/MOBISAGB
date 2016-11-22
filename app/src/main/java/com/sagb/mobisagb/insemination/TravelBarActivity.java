@@ -11,7 +11,6 @@ import android.view.MenuItem;
 
 import com.sagb.mobisagb.R;
 
-;
 
 public class TravelBarActivity extends FragmentActivity  {
 
@@ -29,7 +28,7 @@ public class TravelBarActivity extends FragmentActivity  {
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setHomeButtonEnabled(true);
 		actionBar.setTitle("bar_title");
-		useSelectedFragment(InsemArtificiel_Init.newInstance());
+		useSelectedFragment(InsemArtificiel_Init.newInstance(TravelBarActivity.this));
 	}
 
 	@Override
@@ -50,11 +49,11 @@ public class TravelBarActivity extends FragmentActivity  {
 
 		switch (item.getItemId()) {
 		case R.id.action_add_travel:
-			fragment=InsemArtificiel_Init.newInstance();
+			fragment=InsemArtificiel_Init.newInstance(TravelBarActivity.this);
 			break ;
 	
 		case R.id.action_show_travels:
-			fragment= InsemArtificiel_Init.newInstance();
+			fragment= InsemArtificiel_Init.newInstance(TravelBarActivity.this);
 			break ;
 			
 		default:
